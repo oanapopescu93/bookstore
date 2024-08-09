@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Row, Col } from 'react-bootstrap'
 import Stars from '../../rating/stars'
-import nopic from '../../../img/icons/nopicture.gif'
 import { Dropdown, DropdownButton, Button} from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping, faHeart } from '@fortawesome/free-solid-svg-icons'
