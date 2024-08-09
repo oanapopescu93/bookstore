@@ -154,7 +154,29 @@ var word_bank = {
     policy_updates: "Policy Updates",
     policy_updates_text: "We may update this Privacy Policy from time to time to reflect changes in our practices or for legal, operational, or regulatory reasons. We will notify you of any significant changes by posting the new policy on our website and updating the effective date.",
     contact_us: "Contact Us",
-    contact_us_text: "If you have any questions or concerns about our Privacy Policy or the way we handle your data, please contact us at privacy@thebookmouse.com. We are committed to addressing your concerns and ensuring your privacy is protected."
+    contact_us_text: "If you have any questions or concerns about our Privacy Policy or the way we handle your data, please contact us at privacy@thebookmouse.com. We are committed to addressing your concerns and ensuring your privacy is protected.",
+
+    dystopian: "Dystopian",
+    classic: "Classic",
+    political: "Political", 
+    animal: "Animal",
+    gothic: "Gothic",
+    epic: "Epic",
+    young_adult: "Young Adult",
+    historical: "Historical",
+    biography: "Biography",
+    memoir: "Memoir",
+    philosophy: "Philosophy",
+    personal_development: "Personal Development",
+    war: "War",
+    suspense: "Suspense",
+    supernatural: "Supernatural",
+    crime: "Crime",
+    literary: "Literary",
+    survival: "Survival",
+    cookbook: "Cookbook",
+    recipes: "Recipes",
+    social_issues: "Social Issues",
 }
 
 export const wordsEng = (info)=>{

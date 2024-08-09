@@ -2,7 +2,6 @@ import React, { useState,useEffect } from 'react'
 import { Button, Col, Dropdown, DropdownButton, Row } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons'
-import nopic from '../../../img/icons/nopicture.gif'
 import Stars from '../../rating/stars'
 import { translate } from '../../../translations/translate'
 import { formatPrice } from '../../../utils/utils'
@@ -19,8 +18,10 @@ function ProductCard(props) {
                     <h4>{product.title}</h4>
                 </div>
                 <p className="cell_author">{product.author}</p>
-                <Stars score={product.rating} max={5} />
-                <img src={nopic} onClick={()=>props.handleClick(product.id)}/>
+                <Stars score={product.rating} max={5} />                
+                <div className="image_box">
+                    <img src={"/img/book_covers/" + product.fileUrl + ".jpg"} onClick={()=>props.handleClick(product.id)}/>
+                </div>
                 <div className="price_box">
                     <span className="price">{formatPrice(product.price)} {currency}</span>
                 </div>

@@ -16,7 +16,7 @@ module.exports = Object.freeze({
             "type": "fiction",
             "subtype": "literary_fiction",
             "promo": true,
-            "fileUrl": "/ebooks/1984_george_orwell/1984_george_orwell"
+            "fileUrl": "1984_george_orwell"
         },
         {
             "id": 2,
@@ -34,7 +34,7 @@ module.exports = Object.freeze({
             "type": "fiction",
             "subtype": "mystery",
             "promo": false,
-            "fileUrl": "/ebooks/and_then_there_were_none_agatha_christie/and_then_there_were_none_agatha_christie"
+            "fileUrl": "and_then_there_were_none_agatha_christie"
         },
         {
             "id": 3,
@@ -52,7 +52,7 @@ module.exports = Object.freeze({
             "type": "children",
             "subtype": "other_children_books",
             "promo": true,
-            "fileUrl": "/ebooks/charlottes_web_eb_white/charlottes_web_eb_white"
+            "fileUrl": "charlottes_web_eb_white"
         },
         {
             "id": 4,
@@ -70,7 +70,7 @@ module.exports = Object.freeze({
             "type": "fiction",
             "subtype": "horror",
             "promo": false,
-            "fileUrl": "/ebooks/dracula_bram_stoker/dracula_bram_stoker"
+            "fileUrl": "dracula_bram_stoker"
         },
         {
             "id": 5,
@@ -88,7 +88,7 @@ module.exports = Object.freeze({
             "type": "fiction",
             "subtype": "sf",
             "promo": true,
-            "fileUrl": "/ebooks/dune_frank_herbert/dune_frank_herbert"
+            "fileUrl": "dune_frank_herbert"
         },
         {
             "id": 6,
@@ -106,7 +106,7 @@ module.exports = Object.freeze({
             "type": "fiction",
             "subtype": "sf",
             "promo": false,
-            "fileUrl": "/ebooks/enders_game_orson_scott_card/enders_game_orson_scott_card"
+            "fileUrl": "enders_game_orson_scott_card"
         },
         {
             "id": 7,
@@ -124,7 +124,7 @@ module.exports = Object.freeze({
             "type": "children",
             "subtype": "fairy_tales",
             "promo": true,
-            "fileUrl": "/ebooks/grimms_fairy_tales_brothers_grimm/grimms_fairy_tales_brothers_grimm"
+            "fileUrl": "grimms_fairy_tales_brothers_grimm"
         },
         {
             "id": 8,
@@ -140,7 +140,7 @@ module.exports = Object.freeze({
             "type": "fiction",
             "subtype": "fantasy",
             "promo": true,
-            "fileUrl": "/ebooks/harry_potter_and_the_sorcerers_stone_jk_rowling/harry_potter_and_the_sorcerers_stone_jk_rowling"
+            "fileUrl": "harry_potter_and_the_sorcerers_stone_jk_rowling"
         },
         {
             "id": 9,
@@ -156,7 +156,7 @@ module.exports = Object.freeze({
             "type": "non_fiction",
             "subtype": "biography",
             "promo": false,
-            "fileUrl": "/ebooks/into_the_wild_jon_krakauer/into_the_wild_jon_krakauer"
+            "fileUrl": "into_the_wild_jon_krakauer"
         },
         {
             "id": 10,
@@ -174,7 +174,7 @@ module.exports = Object.freeze({
             "type": "fiction",
             "subtype": "horror",
             "promo": false,
-            "fileUrl": "/ebooks/it_stephen_king/it_stephen_king"
+            "fileUrl": "it_stephen_king"
         },
         {
             "id": 11,
@@ -191,7 +191,7 @@ module.exports = Object.freeze({
             "type": "fiction",
             "subtype": "sf",
             "promo": true,
-            "fileUrl": "/ebooks/journey_to_the_center_of_the_earth_jules_verne/journey_to_the_center_of_the_earth_jules_verne"
+            "fileUrl": "journey_to_the_center_of_the_earth_jules_verne"
         },
         {
             "id": 12,
@@ -207,7 +207,7 @@ module.exports = Object.freeze({
             "type": "fiction",
             "subtype": "fantasy",
             "promo": true,
-            "fileUrl": "/ebooks/lord_of_the_rings_jrr_tolkien01/lord_of_the_rings_jrr_tolkien01"
+            "fileUrl": "lord_of_the_rings_jrr_tolkien01"
         },
         {
             "id": 13,
@@ -223,7 +223,7 @@ module.exports = Object.freeze({
             "type": "fiction",
             "subtype": "fantasy",
             "promo": true,
-            "fileUrl": "/ebooks/lord_of_the_rings_jrr_tolkien02/lord_of_the_rings_jrr_tolkien02"
+            "fileUrl": "lord_of_the_rings_jrr_tolkien02"
         },
         {
             "id": 14,
@@ -239,7 +239,7 @@ module.exports = Object.freeze({
             "type": "fiction",
             "subtype": "fantasy",
             "promo": true,
-            "fileUrl": "/ebooks/lord_of_the_rings_jrr_tolkien03/lord_of_the_rings_jrr_tolkien03"
+            "fileUrl": "lord_of_the_rings_jrr_tolkien03"
         },
         {
             "id": 15,
@@ -257,7 +257,7 @@ module.exports = Object.freeze({
             "type": "children",
             "subtype": "other_children_books",
             "promo": true,
-            "fileUrl": "/ebooks/matilda_roald_dahl/matilda_roald_dahl"
+            "fileUrl": "matilda_roald_dahl"
         },
         {
             "id": 16,
@@ -274,7 +274,7 @@ module.exports = Object.freeze({
             "type": "fiction",
             "subtype": "graphic_novel",
             "promo": false,
-            "fileUrl": "/ebooks/maus_art_spiegelman01/maus_art_spiegelman01"
+            "fileUrl": "maus_art_spiegelman01"
         },
         {
             "id": 17,
@@ -292,7 +292,7 @@ module.exports = Object.freeze({
             "type": "fiction",
             "subtype": "graphic_novel",
             "promo": false,
-            "fileUrl": "/ebooks/maus_art_spiegelman02/maus_art_spiegelman02"
+            "fileUrl": "maus_art_spiegelman02"
         },    
         {
             "id": 18,
@@ -309,7 +309,7 @@ module.exports = Object.freeze({
             "type": "fiction",
             "subtype": "romance",
             "promo": false,
-            "fileUrl": "/ebooks/outlander_diana_gabaldon/outlander_diana_gabaldon"
+            "fileUrl": "outlander_diana_gabaldon"
         },
         {
             "id": 19,
@@ -327,7 +327,7 @@ module.exports = Object.freeze({
             "type": "fiction",
             "subtype": "graphic_novel",
             "promo": false,
-            "fileUrl": "/ebooks/persepolis_marjane_satrapi01/persepolis_marjane_satrapi01"
+            "fileUrl": "persepolis_marjane_satrapi01"
         },
         {
             "id": 20,
@@ -345,7 +345,7 @@ module.exports = Object.freeze({
             "type": "fiction",
             "subtype": "graphic_novel",
             "promo": false,
-            "fileUrl": "/ebooks/persepolis_marjane_satrapi02/persepolis_marjane_satrapi02"
+            "fileUrl": "persepolis_marjane_satrapi02"
         },
         {
             "id": 21,
@@ -363,7 +363,7 @@ module.exports = Object.freeze({
             "type": "fiction",
             "subtype": "romance",
             "promo": true,
-            "fileUrl": "/ebooks/pride_and_prejudice_jane_austen/pride_and_prejudice_jane_austen"
+            "fileUrl": "pride_and_prejudice_jane_austen"
         },
         {
             "id": 22,
@@ -381,7 +381,7 @@ module.exports = Object.freeze({
             "type": "fiction",
             "subtype": "adventure",
             "promo": false,
-            "fileUrl": "/ebooks/robinson_crusoe_daniel_defoe/robinson_crusoe_daniel_defoe"
+            "fileUrl": "robinson_crusoe_daniel_defoe"
         },
         {
             "id": 23,
@@ -399,7 +399,7 @@ module.exports = Object.freeze({
             "type": "non_fiction",
             "subtype": "history",
             "promo": false,
-            "fileUrl": "/ebooks/sapiens_a_brief_history_of_humankind_yuval_noah_harari/sapiens_a_brief_history_of_humankind_yuval_noah_harari"
+            "fileUrl": "sapiens_a_brief_history_of_humankind_yuval_noah_harari"
         },
         {
             "id": 24,
@@ -417,7 +417,7 @@ module.exports = Object.freeze({
             "type": "non_fiction",
             "subtype": "self_help",
             "promo": true,
-            "fileUrl": "/ebooks/the_7_habits_of_highly_effective_people_stephen_r_covey/the_7_habits_of_highly_effective_people_stephen_r_covey"
+            "fileUrl": "the_7_habits_of_highly_effective_people_stephen_r_covey"
         },
         {
             "id": 25,
@@ -435,7 +435,7 @@ module.exports = Object.freeze({
             "type": "fiction",
             "subtype": "historical_fiction",
             "promo": false,
-            "fileUrl": "/ebooks/the_book_thief_markus_zusak/the_book_thief_markus_zusak"
+            "fileUrl": "the_book_thief_markus_zusak"
         },
         {
             "id": 26,
@@ -453,7 +453,7 @@ module.exports = Object.freeze({
             "type": "fiction",
             "subtype": "thriller",
             "promo": false,
-            "fileUrl": "/ebooks/the_da_vinci_code_dan_brown/the_da_vinci_code_dan_brown"
+            "fileUrl": "the_da_vinci_code_dan_brown"
         },
         {
             "id": 27,
@@ -471,7 +471,7 @@ module.exports = Object.freeze({
             "type": "fiction",
             "subtype": "horror",
             "promo": true,
-            "fileUrl": "/ebooks/the_exorcist_william_peter_blatty/the_exorcist_william_peter_blatty"
+            "fileUrl": "the_exorcist_william_peter_blatty"
         },
         {
             "id": 28,
@@ -489,7 +489,7 @@ module.exports = Object.freeze({
             "type": "fiction",
             "subtype": "mystery",
             "promo": false,
-            "fileUrl": "/ebooks/the_girl_with_the_dragon_tattoo_stieg_larsson/the_girl_with_the_dragon_tattoo_stieg_larsson"
+            "fileUrl": "the_girl_with_the_dragon_tattoo_stieg_larsson"
         },
         {
             "id": 29,
@@ -507,7 +507,7 @@ module.exports = Object.freeze({
             "type": "fiction",
             "subtype": "literary_fiction",
             "promo": true,
-            "fileUrl": "/ebooks/the_great_gatsby_f_scott_fitzgerald/the_great_gatsby_f_scott_fitzgerald"
+            "fileUrl": "the_great_gatsby_f_scott_fitzgerald"
         },
         {
             "id": 30,
@@ -523,7 +523,7 @@ module.exports = Object.freeze({
             "type": "fiction",
             "subtype": "fantasy",
             "promo": true,
-            "fileUrl": "/ebooks/the_hobbit_jrr_tolkien/the_hobbit_jrr_tolkien"
+            "fileUrl": "the_hobbit_jrr_tolkien"
         },
         {
             "id": 31,
@@ -541,7 +541,7 @@ module.exports = Object.freeze({
             "type": "fiction",
             "subtype": "literary_fiction",
             "promo": false,
-            "fileUrl": "/ebooks/the_hunger_games_suzanne_collins01/the_hunger_games_suzanne_collins01"
+            "fileUrl": "the_hunger_games_suzanne_collins01"
         },
         {
             "id": 32,
@@ -559,7 +559,7 @@ module.exports = Object.freeze({
             "type": "fiction",
             "subtype": "literary_fiction",
             "promo": false,
-            "fileUrl": "/ebooks/the_hunger_games_suzanne_collins02/the_hunger_games_suzanne_collins02"
+            "fileUrl": "the_hunger_games_suzanne_collins02"
         },
         {
             "id": 33,
@@ -577,7 +577,7 @@ module.exports = Object.freeze({
             "type": "fiction",
             "subtype": "literary_fiction",
             "promo": false,
-            "fileUrl": "/ebooks/the_hunger_games_suzanne_collins03/the_hunger_games_suzanne_collins03"
+            "fileUrl": "the_hunger_games_suzanne_collins03"
         },
         {
             "id": 34,
@@ -593,7 +593,7 @@ module.exports = Object.freeze({
             "type": "non_fiction",
             "subtype": "technology",
             "promo": false,
-            "fileUrl": "/ebooks/the_innovators_walter_isaacson/the_innovators_walter_isaacson"
+            "fileUrl": "the_innovators_walter_isaacson"
         },
         {
             "id": 35,
@@ -611,7 +611,7 @@ module.exports = Object.freeze({
             "type": "fiction",
             "subtype": "horror",
             "promo": false,
-            "fileUrl": "/ebooks/the_road_cormac_mccarthy/the_road_cormac_mccarthy"
+            "fileUrl": "the_road_cormac_mccarthy"
         },
         {
             "id": 36,
@@ -627,7 +627,7 @@ module.exports = Object.freeze({
             "type": "non_fiction",
             "subtype": "cooking",
             "promo": true,
-            "fileUrl": "/ebooks/the_joy_of_cooking_irma_s_rombauer/the_joy_of_cooking_irma_s_rombauer"
+            "fileUrl": "the_joy_of_cooking_irma_s_rombauer"
         },
         {
             "id": 37,
@@ -645,7 +645,7 @@ module.exports = Object.freeze({
             "type": "non_fiction",
             "subtype": "economics",
             "promo": false,
-            "fileUrl": "/ebooks/the_lean_startup_eric_ries/the_lean_startup_eric_ries"
+            "fileUrl": "the_lean_startup_eric_ries"
         },
         {
             "id": 38,
@@ -663,7 +663,7 @@ module.exports = Object.freeze({
             "type": "fiction",
             "subtype": "literary_fiction",
             "promo": true,
-            "fileUrl": "/ebooks/to_kill_a_mockingbird_harper_lee/to_kill_a_mockingbird_harper_lee"
+            "fileUrl": "to_kill_a_mockingbird_harper_lee"
         },
         {
             "id": 39,
@@ -681,7 +681,7 @@ module.exports = Object.freeze({
             "type": "fiction",
             "subtype": "adventure",
             "promo": false,
-            "fileUrl": "/ebooks/treasure_island_robert_louis_stevenson/treasure_island_robert_louis_stevenson"
+            "fileUrl": "treasure_island_robert_louis_stevenson"
         },
         {
             "id": 40,
@@ -698,7 +698,7 @@ module.exports = Object.freeze({
             "type": "fiction",
             "subtype": "sf",
             "promo": false,
-            "fileUrl": "/ebooks/twenty_thousand_leagues_under_the_sea_jules_verne/twenty_thousand_leagues_under_the_sea_jules_verne"
+            "fileUrl": "twenty_thousand_leagues_under_the_sea_jules_verne"
         },
         {
             "id": 41,
@@ -714,7 +714,7 @@ module.exports = Object.freeze({
             "type": "non_fiction",
             "subtype": "technology",
             "promo": false,
-            "fileUrl": "/ebooks/coding_with_javascript_for_dummies/coding_with_javascript_for_dummies"
+            "fileUrl": "coding_with_javascript_for_dummies"
         }
     ],
     HEADERLIST: [

@@ -400,7 +400,7 @@ textarea:focus, input:focus{
 .featured_categories .category_card_box{
   position: relative;
   z-index: 1;
-  height: 370px;
+  height: 400px;
   padding: var(--padding);
 }
 .featured_categories .category_card h3{
@@ -473,6 +473,10 @@ textarea:focus, input:focus{
   margin: var(--padding) 0px;
   display: inline-block!important;
   cursor: pointer;
+}
+.cell_bookstore .image_box img{
+  height: 320px;
+  width: auto;
 }
 
 /* FOOTER */
@@ -666,6 +670,14 @@ textarea:focus, input:focus{
   border-radius: var(--radius);
   cursor: pointer;
 }
+.product_card .image_box{
+  width: 100%;
+  overflow: hidden;
+}
+.product_card .image_box img{
+  height: 320px;
+  width: auto;
+}
 .product_card .price_box {
   color: var(--accent02);
 }
@@ -764,6 +776,10 @@ textarea:focus, input:focus{
   margin-bottom: var(--padding_small);
   border-bottom: solid 1px var(--color);
 }
+.product_info_dropdown_format{
+  width: 100%;
+  max-width: 155px;
+}
 .product_info .tag_box{
   border: solid 1px var(--color);
   padding: var(--padding_small) var(--padding);
@@ -786,6 +802,10 @@ textarea:focus, input:focus{
 }
 .breadcrumb_item:hover span{
   text-decoration: underline;
+}
+.similar_products{
+  padding: var(--padding) 0px;
+  border-bottom: solid 1px var(--color);
 }
 
 /* DROPDOWN */

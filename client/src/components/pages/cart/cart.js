@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { Col, Row, Button, Dropdown, DropdownButton } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashCan, faCartShopping, faBookOpen } from '@fortawesome/free-solid-svg-icons'
-import nopic from '../../../img/icons/nopicture.gif'
 import { useDispatch } from 'react-redux'
 import { cartRemove, cartUpdate } from '../../../reducers/cart'
 import { changePage } from '../../../reducers/page'
@@ -69,7 +68,7 @@ function Cart(props) {
                     {cart.map(item => {
                         return <Row key={item.cartId} className="cart_item">
                             <Col xs={4} sm={4} md={4} lg={2} className="cart_item_image">
-                                <img src={nopic} alt={item.title} />
+                                <img src={"/img/book_covers/" + item.fileUrl + ".jpg"} alt={item.title} />
                             </Col>
                             <Col xs={8} sm={6} md={6} lg={8} className="cart_item_info">
                                 <Row>
@@ -78,8 +77,7 @@ function Cart(props) {
                                         <p>{item.author}</p>
                                         <div className="price_box">
                                             <span className="price">{formatPrice(item.price, item.selected_format)} {currency}</span>
-                                        </div>  
-                                        {item.id} {item.cartId} {item.selected_format}                                     
+                                        </div>                                
                                         <DropdownButton id="dropdown-format" title={formats[item.cartId] || "select_format"}>
                                             {item.format.map((x, index) => (
                                                 <Dropdown.Item key={index} onClick={() => handleFormatChange(x, item.id, item.cartId)}>

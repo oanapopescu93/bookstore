@@ -88,10 +88,9 @@ function Checkout(props) {
                 title: cart[i].title, 
                 author: cart[i].author, 
                 selected_format: cart[i].selected_format,
-                fileUrl: cart[i].fileUrl + "." + cart[i].selected_format
+                fileUrl: "/ebooks/" + cart[i].fileUrl + "/" + cart[i].fileUrl + "." + cart[i].selected_format
             })
         }
-        console.log(downloads)
 
         let zip = new JSZip()
         let folder = zip.folder("ebooks")

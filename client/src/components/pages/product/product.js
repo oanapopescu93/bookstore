@@ -102,9 +102,8 @@ function Product(props) {
         <div className="product_container">     
             <Row>
                 <Col sm={4} md={4} lg={3}>
-                    <div className="product_image">
-                        {details.discount && details.discount > 0 ? <div className="discount">{details.discount}%</div> : null}
-                        <img src={nopic} />
+                    <div className="product_image">                        
+                        <img src={"/img/book_covers/" + details.fileUrl + ".jpg"} />
                     </div>                    
                 </Col>
                 <Col sm={8} md={8} lg={9}>
@@ -121,18 +120,20 @@ function Product(props) {
                             <p>{details.description}</p> 
                             <div className="product_info_tags">
                                 {details.tags.map((tag, index) => (
-                                    <div key={index} className="tag_box">{tag}</div>
+                                    <div key={index} className="tag_box">{translate({lang: lang, info: tag})}</div>
                                 ))}
                             </div>
                         </div>
                         <div className="product_info_box">
-                            <DropdownButton id="dropdown-author" title={selectedFormat ? selectedFormat : translate({lang: lang, info: "select_format"})}>
-                                {details.format.map((format, index) => (
-                                    <Dropdown.Item key={index} onClick={() => handleFormatChange(format)}>
-                                        {format}
-                                    </Dropdown.Item>
-                                ))}
-                            </DropdownButton>
+                            <div className="product_info_dropdown_format">
+                                <DropdownButton id="dropdown_format" title={selectedFormat ? selectedFormat : translate({lang: lang, info: "select_format"})}>
+                                    {details.format.map((format, index) => (
+                                        <Dropdown.Item key={index} onClick={() => handleFormatChange(format)}>
+                                            {format}
+                                        </Dropdown.Item>
+                                    ))}
+                                </DropdownButton>
+                            </div>                            
                             {errorSelectedFormat ? <div className="alert alert-danger">
                                 <p>{translate({lang: lang, info: "error_format"})}</p>
                             </div> : null}
@@ -150,7 +151,7 @@ function Product(props) {
             </Row>
             {products && products.length > 0 ? <Row>
                 <Col sm={12}>
-                    <h2>{translate({lang: lang, info: "similar_products"})}</h2>
+                    <h2 className="similar_products">{translate({lang: lang, info: "similar_products"})}</h2>
                     <Carousel 
                         {...props}
                         id="carousel_similar_products"

@@ -2,7 +2,6 @@ import React from 'react'
 import { Col, Row, Button } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping, faTrashCan } from '@fortawesome/free-solid-svg-icons'
-import nopic from '../../../img/icons/nopicture.gif'
 import { useDispatch } from 'react-redux'
 import { cartAdd, cartRemove } from '../../../reducers/cart'
 import { translate } from '../../../translations/translate'
@@ -34,7 +33,7 @@ function Wishlist(props) {
                     {wishlist.map(item => {
                         return <Row key={item.cartId} className="wishlist_item">
                             <Col xs={4} sm={4} md={4} lg={2} className="wishlist_item_image">
-                                <img src={nopic} alt={item.title} />
+                                <img src={"/img/book_covers/" + item.fileUrl + ".jpg"} alt={item.title} />
                             </Col>
                             <Col xs={8} sm={6} md={6} lg={8} className="wishlist_item_info">
                                 <Row>

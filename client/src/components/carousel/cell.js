@@ -2,7 +2,6 @@ import React from 'react'
 import { Button} from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons'
-import nopic from '../../img/icons/nopicture.gif'
 import Stars from '../rating/stars'
 import { formatPrice } from '../../utils/utils'
 
@@ -25,8 +24,10 @@ function Cell(props) {
                             <div className="cell_info">
                                 <h4 className="cell_title">{data.title}</h4>
                                 <p className="cell_author">{data.author}</p>
-                                <Stars score={data.rating} max={5}/>
-                                <img src={nopic} onClick={()=>getItem(data)}/>
+                                <Stars score={data.rating} max={5}/>                                
+                                <div className="image_box">
+                                    <img src={"/img/book_covers/" + data.fileUrl + ".jpg"} onClick={()=>getItem(data)}/>
+                                </div>
                                 <div className="price_box">
                                     <span className="price">{formatPrice(data.price)} {currency}</span>
                                 </div>
