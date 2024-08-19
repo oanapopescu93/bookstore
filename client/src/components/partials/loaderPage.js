@@ -1,10 +1,10 @@
 import React from 'react'
 
-function Loader(){
+function LoaderPage(){
 	return <div className="loader_container">
 		<div className="loader">
 			<p>Loading...</p>
         </div>
 	</div>
 }
-export default Loader
+export default LoaderPage

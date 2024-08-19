@@ -986,6 +986,11 @@ textarea:focus, input:focus{
   display: inline-block;
 }
 
+/* LOADER PAGE */
+.loader_container{
+  text-align: center;
+}
+
 @media (max-width: 767px) {
   h1 {
 		font-size: 30px;

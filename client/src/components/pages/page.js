@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import Popup from '../popup/popup'
 import { bringPayload } from '../../reducers/home'
-import Loader from '../partials/loader'
 import HomePages from './homePage/homePage'
 import Contact from './contact/contact'
 import Cart from './cart/cart'
 import About from './about/about'
 import Category from './category/category'
-import Product from './product/product'
-import Footer from '../partials/footer'
-import Header from '../partials/header/header'
-import { changePage } from '../../reducers/page'
 import Wishlist from './wishlist/wishlist'
 import TermsConditions from './termsConditions/termsConditions'
 import PolicyPrivacy from './policyPrivacy/policyPrivacy'
 import Checkout from './checkout/checkout'
+import Product from './product/product'
+import Footer from '../partials/footer'
+import Header from '../partials/header/header'
+import LoaderPage from '../partials/loaderPage'
+import Popup from '../popup/popup'
+import { changePage } from '../../reducers/page'
 import { changePopup } from '../../reducers/popup'
 import { translate } from '../../translations/translate'
 import { getCookie, isEmpty, postData, setCookie } from '../../utils/utils'
@@ -196,7 +196,7 @@ function Page(props) {
                 }
                 
             } else {
-                return <Loader />
+                return <LoaderPage />
             }
         })()}
         <Footer {...props} settings={settings}/>
