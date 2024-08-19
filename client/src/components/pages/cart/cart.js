@@ -55,6 +55,10 @@ function Cart(props) {
     const totalPrice = cart.reduce((total, item) => {
         return total + convertCurrency(formatPrice(item.price, item.selected_format), currency, exchange_rates)
     }, 0)
+    const totalPriceUSD = cart.reduce((total, item) => {
+        return total + formatPrice(item.price, item.selected_format)
+    }, 0)
+    const minimum_amount = convertCurrency(3, currency, exchange_rates)
 
     return <div className="page page_box">   
         <div className="cart_container">
@@ -102,8 +106,8 @@ function Cart(props) {
                 <Col sm={4}>
                     <div className="total_price">
                         <h4>{translate({lang: lang, info: "total_price"})}</h4>
-                        <h2>{totalPrice.toFixed(2)} {currency}</h2>
-                        {totalPrice > finance.minimum_amount_usd ? <div className="cart_item_buttons">
+                        <h2>{totalPrice.toFixed(2)} {currency} {totalPriceUSD}</h2>
+                        {totalPriceUSD > finance.minimum_amount_usd ? <div className="cart_item_buttons">
                             <Button type="button" className="mybutton button_fullcolor01" onClick={()=>handleCheckout()}>
                                 <FontAwesomeIcon icon={faCartShopping} />&nbsp;
                                 <span>{translate({lang: lang, info: "checkout"})}</span>
@@ -114,7 +118,7 @@ function Cart(props) {
                             </Button>
                         </div> : <div className="alert alert-danger">
                             <p><b>{translate({lang: lang, info: "amount_too_low"})}</b></p>
-                            <p>{translate({lang: lang, info: "minimum_amount_is"})} {finance.minimum_amount_usd} {currency}</p>
+                            <p>{translate({lang: lang, info: "minimum_amount_is"})} {minimum_amount} USD</p>
                         </div>}
                     </div>
                 </Col>
