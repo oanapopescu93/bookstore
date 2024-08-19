@@ -10,7 +10,7 @@ import Settings from "./settings"
 import PaymentSuccess from "./paymentSuccess"
 
 function Popup(props){
-    const {settings, home} = props
+    const {settings} = props
     const {lang} = settings
 
     let open = useSelector(state => state.popup.open)
@@ -46,9 +46,9 @@ function Popup(props){
             {(() => {					
                 switch (template) {
                     case "settings":
-                        return <Settings {...props} settings={settings} home={home}/>   
+                        return <Settings {...props} />   
                     case "paymentSuccess":
-                        return <PaymentSuccess {...props} settings={settings} data={data} />                  
+                        return <PaymentSuccess {...props} data={data}/>                  
                     case "error":
                     default:
                         return <>{typeof data === "string" ? <Default settings={settings} text={data} /> : null}</>

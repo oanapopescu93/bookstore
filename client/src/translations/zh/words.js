@@ -177,6 +177,13 @@ var word_bank = {
     cookbook: "烹饪书",
     recipes: "食谱",
     social_issues: "社会问题",
+
+    search: "搜索",
+    settings: "设置",
+    language: "语言",
+    date: "日期",
+    currency: "货币",
+    examples: "示例",
 }
 
 export const wordsZh = (info)=>{

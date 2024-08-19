@@ -177,6 +177,13 @@ var word_bank = {
     cookbook: "Carte de Bucate",
     recipes: "Rețete",
     social_issues: "Probleme Sociale",
+
+    search: "Căutare",
+    settings: "Setări",
+    language: "Limbă",
+    date: "Dată",
+    currency: "Monedă",
+    examples: "Exemple",
 }
 
 export const wordsRo = (info)=>{

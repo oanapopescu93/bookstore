@@ -1,16 +1,23 @@
 import React, { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMagnifyingGlass, faGear, faHeart, faCartShopping } from '@fortawesome/free-solid-svg-icons'
+import { faGear, faHeart, faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import { changePopup } from '../../../reducers/popup'
 import { useDispatch } from 'react-redux'
 import logo from '../../../img/icons/logo.png'
 import { translate } from '../../../translations/translate'
+import Search from './search'
+import { filterProducts } from '../../../reducers/home'
+import { changePage } from '../../../reducers/page'
 
 function NavBar(props) {
-    const { menuToggle, cart, wishlist, settings } = props
+    const { menuToggle, home, cart, wishlist, settings } = props
     const { lang } = settings
+    const { products } = home
+
     const [cartItemsTotal, setCartItemsTotal] = useState(cart.length)
     const [wishlistItemsTotal, setWishlistItemsTotal] = useState(wishlist.length)
+    const [searchValue, setSearchValue] = useState('')
+
     let dispatch = useDispatch()
 
     useEffect(() => {
@@ -38,6 +45,19 @@ function NavBar(props) {
         dispatch(changePopup(payload))
     }
 
+    function handleInputChange(e){
+        setSearchValue(e)        
+    }
+
+    function handleSearchValue(){        
+        let filtered = products.filter(product => 
+            product.title.toLowerCase().includes(searchValue) || 
+            product.author.toLowerCase().includes(searchValue)
+        )
+        dispatch(filterProducts(filtered))
+        dispatch(changePage({choice: "category"}))
+    }
+
     return <nav className="navbar">
         <div className={menuToggle ? "menu_icon change" : "menu_icon"} onClick={()=>handleMenuClick()}>
             <div className="bar1"></div>
@@ -52,12 +72,7 @@ function NavBar(props) {
             </div>
         </div>
         <div className="item search right">
-            <div className="search_group">            
-                <input type="text" />
-                <div className="search_icon">
-                    <FontAwesomeIcon icon={faMagnifyingGlass} />
-                </div>
-            </div>
+            <Search {...props} searchValue={searchValue} handleInputChange={(e)=>handleInputChange(e)} handleSearchValue={()=>handleSearchValue()}/>
         </div>
         <div className="group_list">
             <div className="group">

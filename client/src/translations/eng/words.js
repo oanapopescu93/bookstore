@@ -73,7 +73,7 @@ var word_bank = {
     no_cart: "The cart is empty",
     no_wishlist: "The wishlist is empty",
     total_price: "Total price",
-    card_number: "Card_number",
+    card_number: "Card number",
     month: "Month",
     year: "Year",
     cvv: "CVV",
@@ -177,6 +177,13 @@ var word_bank = {
     cookbook: "Cookbook",
     recipes: "Recipes",
     social_issues: "Social Issues",
+    
+    search: "Search",
+    settings: "Settings",
+    language: "Language",
+    date: "Date",
+    currency: "Currency",
+    examples: "Examples",
 }
 
 export const wordsEng = (info)=>{

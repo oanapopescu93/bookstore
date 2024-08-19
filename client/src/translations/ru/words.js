@@ -177,6 +177,13 @@ var word_bank = {
     cookbook: "Кулинарная книга",
     recipes: "Рецепты",
     social_issues: "Социальные вопросы",
+
+    search: "Поиск",
+    settings: "Настройки",
+    language: "Язык",
+    date: "Дата",
+    currency: "Валюта",
+    examples: "Примеры",
 }
 
 export const wordsRu = (info)=>{

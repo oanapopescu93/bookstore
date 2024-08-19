@@ -4,10 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons'
 import Stars from '../../rating/stars'
 import { translate } from '../../../translations/translate'
-import { formatPrice } from '../../../utils/utils'
+import { convertCurrency, formatPrice } from '../../../utils/utils'
 
-function ProductCard(props) {
-    const { product, settings } = props
+function ProductCard(props){
+    const { product, exchange_rates, settings } = props
     const { currency } = settings
 
     return <div className="product_card_container">
@@ -23,7 +23,7 @@ function ProductCard(props) {
                     <img src={"/img/book_covers/" + product.fileUrl + ".jpg"} onClick={()=>props.handleClick(product.id)}/>
                 </div>
                 <div className="price_box">
-                    <span className="price">{formatPrice(product.price)} {currency}</span>
+                    <span className="price">{convertCurrency(formatPrice(product.price), currency, exchange_rates)} {currency}</span>
                 </div>
             </div>
             <div className="cell_button">
@@ -35,8 +35,8 @@ function ProductCard(props) {
     </div>
 }
 
-function Products(props){ 
-    const { products, settings } = props
+function Products(props){
+    const { products, exchange_rates, settings } = props
     const { lang } = settings
 
     const [currentPage, setCurrentPage] = useState(1)
@@ -104,9 +104,7 @@ function Products(props){
                     key={i}
                     className={`page-item ${currentPage === i ? 'active' : ''}`}
                     onClick={() => handlePageChange(i)}
-                >
-                    {i}
-                </Button>
+                >{i}</Button>
             )
         }
 
@@ -141,7 +139,7 @@ function Products(props){
         <Row className="products">
             {currentProducts.map(product => (
                 <Col key={product.id} sm={12} md={6} lg={3}>
-                    <ProductCard product={product} settings={settings} handleClick={(id) => props.handleClick(id)} />
+                    <ProductCard product={product} settings={settings} exchange_rates={exchange_rates} handleClick={(id) => props.handleClick(id)} />
                 </Col>
             ))}
         </Row>

@@ -3,10 +3,10 @@ import { Button} from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons'
 import Stars from '../rating/stars'
-import { formatPrice } from '../../utils/utils'
+import { convertCurrency, formatPrice } from '../../utils/utils'
 
 function Cell(props) {
-    const {data, template, settings} = props
+    const {data, template, exchange_rates, settings} = props
     const {currency} = settings
 
     function getItem(x){ 
@@ -29,7 +29,7 @@ function Cell(props) {
                                     <img src={"/img/book_covers/" + data.fileUrl + ".jpg"} onClick={()=>getItem(data)}/>
                                 </div>
                                 <div className="price_box">
-                                    <span className="price">{formatPrice(data.price)} {currency}</span>
+                                    <span className="price">{convertCurrency(formatPrice(data.price), currency, exchange_rates)} {currency}</span>
                                 </div>
                             </div>
                             <div className="cell_button">

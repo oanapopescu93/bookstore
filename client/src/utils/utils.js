@@ -232,16 +232,16 @@ export const getProducts = (cart, market)=>{
 
 export const convertCurrency = (value=0, currency="USD", exchangeRates=null, shorten=true)=>{  
   if (value <= 0) {
-    console.error("convertCurrency-value-error--> ", value)
+    console.error("convertCurrency-value-error1--> ", value)
     return value
   }
   if(!exchangeRates){
-    console.error("convertCurrency-exchangeRates-error--> ", exchangeRates)
+    console.error("convertCurrency-exchangeRates-error2--> ", exchangeRates)
     return value
   }
   const rate = exchangeRates[currency]
   if(!rate){
-    console.error("convertCurrency-rate-error--> ", rate)
+    console.error("convertCurrency-rate-error3--> ", rate)
     return value
   }
   let result = parseInt(value) * rate

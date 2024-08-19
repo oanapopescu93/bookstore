@@ -11,10 +11,10 @@ import Carousel from '../../carousel/carousel'
 import { cartAdd } from '../../../reducers/cart'
 import { wishlistAdd } from '../../../reducers/wishlist'
 import { translate } from '../../../translations/translate'
-import { formatPrice } from '../../../utils/utils'
+import { convertCurrency, formatPrice } from '../../../utils/utils'
 
 function Product(props) {
-    const { page, home, settings } = props
+    const { page, home, exchange_rates, settings } = props
     const { details } = page
     const { lang, currency } = settings
 
@@ -97,6 +97,8 @@ function Product(props) {
         dispatch(changePage(payload))
     }
 
+    //<span className="price">{convertCurrency(formatPrice(data.price), currency, exchange_rates)} {currency}</span>
+
     return <div className="page page_box">     
         <div className="product_container">     
             <Row>
@@ -112,7 +114,7 @@ function Product(props) {
                         <h2>{details.author}</h2>
                         <Stars score={details.rating} max={5} />
                         <div className="price_box">
-                            <span className="price">{formatPrice(details.price, selectedFormat)} {currency}</span>
+                            <span className="price">{convertCurrency(formatPrice(details.price, selectedFormat), currency, exchange_rates)} {currency}</span>
                         </div>
                         <div className="product_info_box">
                             <h3>{translate({lang: lang, info: "description"})}</h3>

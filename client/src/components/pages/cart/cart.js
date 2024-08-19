@@ -6,10 +6,10 @@ import { useDispatch } from 'react-redux'
 import { cartRemove, cartUpdate } from '../../../reducers/cart'
 import { changePage } from '../../../reducers/page'
 import { translate } from '../../../translations/translate'
-import { formatPrice } from '../../../utils/utils'
+import { convertCurrency, formatPrice } from '../../../utils/utils'
 
 function Cart(props) {
-    const { settings, home, cart } = props
+    const { settings, home, exchange_rates, cart } = props
     const { lang, currency } = settings
     const { finance } = home
     const [formats, setFormats] = useState({})
@@ -31,15 +31,16 @@ function Cart(props) {
     function handleFormatChange(x, id, cartId){
         setErrorFormats(prev => ({ ...prev, [cartId]: false }))
         const itemExists = cart.some(item => {
-            console.log(x, id, item)
             return item.id === id && item.selected_format === x
-        })
-        console.log('itemExists', itemExists)
+        })        
         if (!itemExists) {
             setFormats(prev => ({ ...prev, [cartId]: x }))
             dispatch(cartUpdate({cartId, selected_format: x}))
         } else {
             setErrorFormats(prev => ({ ...prev, [cartId]: true }))
+            setTimeout(()=>{
+                setErrorFormats(prev => ({ ...prev, [cartId]: false }))
+            }, 2000)
         }
     }
 
@@ -52,7 +53,7 @@ function Cart(props) {
     }
     
     const totalPrice = cart.reduce((total, item) => {
-        return total +  formatPrice(item.price, item.selected_format)
+        return total + convertCurrency(formatPrice(item.price, item.selected_format), currency, exchange_rates)
     }, 0)
 
     return <div className="page page_box">   
@@ -76,7 +77,7 @@ function Cart(props) {
                                         <h4>{item.title}</h4>
                                         <p>{item.author}</p>
                                         <div className="price_box">
-                                            <span className="price">{formatPrice(item.price, item.selected_format)} {currency}</span>
+                                            <span className="price">{convertCurrency(formatPrice(item.price, item.selected_format), currency, exchange_rates)} {currency}</span>
                                         </div>                                
                                         <DropdownButton id="dropdown-format" title={formats[item.cartId] || "select_format"}>
                                             {item.format.map((x, index) => (

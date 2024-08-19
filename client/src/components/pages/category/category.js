@@ -12,7 +12,7 @@ function Category(props) {
     const { page, home, filters, settings } = props
     const { lang } = settings
     
-    const [products, setProducts] = useState(home.products)
+    const [products, setProducts] = useState(home.searchProducts)
     const [minPrice, setMinPrice] = useState(0)
     const [maxPrice, setMaxPrice] = useState(0)
     const [authors, setAuthors] = useState([])
@@ -23,14 +23,14 @@ function Category(props) {
 
     useEffect(() => {
         start()
-    }, [page])
+    }, [page, home])
 
     useEffect(() => {
         handleFilters()
     }, [filters])
 
     function start(){
-        let myProducts = [...home.products]
+        let myProducts = [...home.searchProducts]
         let filter_type = page.subtype ? page.subtype : page.type
 
         if(filter_type){
@@ -56,7 +56,7 @@ function Category(props) {
     }
 
     function handleFilters(){
-        let myProducts = [...home.products]
+        let myProducts = [...home.searchProducts]
         let filter_type = page.subtype ? page.subtype : page.type
 
         if(filter_type){
@@ -98,7 +98,7 @@ function Category(props) {
     }
 
     function handleClick(id){
-        let product = home.products.filter(product => product.id === parseInt(id))
+        let product = home.searchProducts.filter(product => product.id === parseInt(id))
         if(product && product[0]){
             let payload = {choice: "product", details: product[0]}
             dispatch(changePage(payload))

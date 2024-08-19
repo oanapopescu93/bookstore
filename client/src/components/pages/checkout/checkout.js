@@ -76,6 +76,7 @@ function Checkout(props) {
             description: data.payload.description,
             currency: data.payload.currency.toUpperCase(),
             items: data.payload.metadata,
+            cart
         }
         socket.emit('order_send', details)        
         handleDownload(cart)

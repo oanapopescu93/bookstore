@@ -177,6 +177,13 @@ var word_bank = {
     cookbook: "Ricettario",
     recipes: "Ricette",
     social_issues: "Problemi Sociali",
+
+    search: "Cerca",
+    settings: "Impostazioni",
+    language: "Lingua",
+    date: "Data",
+    currency: "Valuta",
+    examples: "Esempi",
 }
 
 export const wordsIt = (info)=>{

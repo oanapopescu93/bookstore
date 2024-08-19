@@ -199,7 +199,7 @@ textarea:focus, input:focus{
 
 .item.search input {
   width: 100%;
-  padding: 6px ;
+  padding: var(--padding_small) var(--padding) ;
   outline: none;
   border: 2px solid var(--bgHeader); 
   background-color: var(--colorHeader);
@@ -340,6 +340,17 @@ textarea:focus, input:focus{
 
 .menu_item:hover .menu_content {
   display: block;
+}
+
+/* SETTINGS */
+.settings .settings_box{
+  margin-bottom: var(--padding_small);
+}
+.settings .settings_box:last-child{
+  margin-bottom: 0px;
+}
+.settings .settings_box h4{
+  margin-bottom: var(--padding_small);
 }
 
 /* HOMEPAGE */
@@ -942,6 +953,10 @@ textarea:focus, input:focus{
 .checkout_container .button_action_group{
   padding: var(--padding) 0px;
 }
+.payment_icons .payment_icon{
+  width: 45px;
+  margin: 0px 2px;
+}
 
 /* CONTACT */
 .contact_form_container{
@@ -950,8 +965,12 @@ textarea:focus, input:focus{
 .contact_form_info a, .contact_form_info a:hover, .contact_form_info a:focus, .contact_form_info a:active{
   color: var(--accent02);
 }
-.contact_form, .contact_form_info{
+.contact_form_info{
+  margin-top: var(--padding);
+}
+.contact_form{
   display: inline-block;
+  vertical-align: middle;
   width: 100%;
   max-width: 600px;
   text-align: left;
@@ -959,6 +978,12 @@ textarea:focus, input:focus{
 }
 .contact_form .label_container, .contact_form input, .contact_form textarea{
   margin-bottom: var(--padding_small);
+}
+.contact_form_info_small{
+  display: none;
+}
+.contact_form_info_big{
+  display: inline-block;
 }
 
 @media (max-width: 767px) {
@@ -1057,9 +1082,12 @@ textarea:focus, input:focus{
   .featured_categories .category_card_box{
     height: auto;
   }
+  .featured_categories .category_card_box .category_card_box_info{
+    display: none;
+  }
   .featured_categories .category_card_box .button_action_group{
     position: static;
-    padding: var(--padding_small) 0px 0px 0px;
+    padding: 0px;
   }
   .cell_bookstore img{
     margin: 0px;
@@ -1089,6 +1117,14 @@ textarea:focus, input:focus{
   .footer_list li{
     display: block;
     border: none;
+  }
+
+  /* CONTACT */
+  .contact_form_info_small{
+    display: inline-block;
+  }
+  .contact_form_info_big{
+    display: none;
   }
 }
 

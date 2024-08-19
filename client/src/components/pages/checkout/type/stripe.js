@@ -5,6 +5,12 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import { checkoutData, isEmpty, paymentErrors } from '../../../../utils/utils'
 import { validateCard, validateCardMonthYear, validateCVV } from '../../../../utils/validate'
 import { translate } from '../../../../translations/translate'
+import jcb from '../../../../img/payments/download1.png'
+import discover from '../../../../img/payments/download2.png'
+import dinner_club from '../../../../img/payments/download3.png'
+import maestro from '../../../../img/payments/download4.png'
+import mastercard from '../../../../img/payments/download5.png'
+import visa from '../../../../img/payments/download6.png'
 
 function Stripe(props) {
     const { settings, paymentSending } = props
@@ -151,6 +157,18 @@ function Stripe(props) {
                         <p>{translate({lang: lang, info: paymentError.cvv.validate_message})}</p>
                     </div> : null}
                 </>}
+            </Col>
+        </Row>
+        <Row>
+            <Col sm={12}>
+                <div className="payment_icons">
+                    <img src={visa} alt="" className="payment_icon"/>
+                    <img src={mastercard} alt="" className="payment_icon"/>
+                    <img src={maestro} alt="" className="payment_icon"/>
+                    <img src={discover} alt="" className="payment_icon"/>
+                    <img src={jcb} alt="jcb" className="payment_icon"/>
+                    <img src={dinner_club} alt="" className="payment_icon"/>                    
+                </div>
             </Col>
         </Row>
         <Row>

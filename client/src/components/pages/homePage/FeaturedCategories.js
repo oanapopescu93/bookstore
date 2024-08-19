@@ -40,10 +40,12 @@ function FeaturedCategories(props) {
                     <div key={index} className="category_box">
                         <div className="category_card shadow_convex">
                             <h3>{translate({lang: lang, info: category.title})}</h3>
-                            <div className="category_card_box">                                
-                                <p>{translate({lang: lang, info: category.description.definition})}</p>
-                                <p>{translate({lang: lang, info: "examples"})}:</p>
-                                <p>{translate({lang: lang, info: category.description.genres})}</p>
+                            <div className="category_card_box">
+                                <div className="category_card_box_info">
+                                    <p>{translate({lang: lang, info: category.description.definition})}</p>
+                                    <p>{translate({lang: lang, info: "examples"})}:</p>
+                                    <p>{translate({lang: lang, info: category.description.genres})}</p>
+                                </div>                                
                                 <div className="button_action_group">
                                     <Button type="button" className="mybutton round button_fullcolor01" onClick={()=>props.handleMenuChoice({choice: "category", type: category.title})}>
                                         <FontAwesomeIcon icon={faBookOpen} />

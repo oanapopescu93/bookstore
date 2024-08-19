@@ -23,7 +23,7 @@ stripePayment.post("/api/stripe", jsonParser, (req, res, next) => {
             return {
                 title: product.title,                
                 quantity: 1,
-                price: Math.round(product.price[product.price.selected_format] * 100), // price in cents
+                price: Math.round(product.price[product.selected_format] * 100), // price in cents
             }
         })
         
