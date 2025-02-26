@@ -88,7 +88,7 @@ function CategoryPanel(props){
                         key={tag} 
                         className={`tag_item ${selectedTags.includes(tag) ? 'selected' : ''}`} 
                         onClick={()=>handleTagClick(tag)}
-                    ><div className="tag_button">{tag}</div></div>
+                    ><div className="tag_button">{translate({lang: lang, info: tag})}</div></div>
                 ))}
             </div>
         </div>

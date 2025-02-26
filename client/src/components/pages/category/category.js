@@ -31,6 +31,7 @@ function Category(props) {
 
     function start(){
         let myProducts = [...home.searchProducts]
+        console.log('myProducts ', myProducts)
         let filter_type = page.subtype ? page.subtype : page.type
 
         if(filter_type){
@@ -45,6 +46,7 @@ function Category(props) {
         const newAuthors = [...new Set(myProducts.map(product => product.author))]
         const getUniqueTags = (products) => {        
             const allTags = products.flatMap(product => product.tags)
+            console.log(allTags)
             return [...new Set(allTags)]
         }
         const newProductsTags = getUniqueTags(myProducts)
